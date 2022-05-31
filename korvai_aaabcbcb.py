@@ -1,6 +1,7 @@
 #imported libraries
 import numpy as np 
 import random as r
+import pandas as pd
 
 class korvai_basic:
     
@@ -94,6 +95,7 @@ class korvai_basic:
     #This provides an example konokol for how an AAABCBCB korvai can be structured given a talam and edam 
     def final_korvai(self):
         korvai_options = self.korvai()
+        korvai_list=[]
         if korvai_options == -1:
             return('impossible to make a korvai, maybe try singing an edam to edam korvai here')
         for k in korvai_options:
@@ -111,6 +113,10 @@ class korvai_basic:
             print(3*A,B,C,B,C,B)
             print(3*A,B,C,B,C,B)
             print()
+            #returns korvai list as a dataframe here
+            str_korvai=3*A+B+C+B+C+B
+            korvai_list.append(str_korvai)
+        return pd.DataFrame(korvai_list,columns={'korvai'})
 
 #The main method takes in a talam and edam (watch out for spelling of the talam LOL) and returns 1+ possible korvais
 def main():
