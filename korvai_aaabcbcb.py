@@ -24,7 +24,7 @@ class korvai_basic:
     #To add more varieties for a specific A, change PURVANGAMS values
     PURVANGAMS = {
         5: ['taka taang,, ', 'taki,ta, '],
-        6: ['takidinatom, ', 'takitataang,, '],
+        6: ['takadinatom, ', 'takitataang,, '],
         7: ['takadimi taang,, '],
         8: ['tatom, tadikitatom ','tadikitatom taang,, ','dit,takadinatom,'],
         9: ['takatom, tadikitatom '],
