@@ -17,7 +17,7 @@ df1=my_korvai1.final_korvai()
 st.table(df1)
 st.subheader("Some korvais with specific purvangam templates include: ")
 my_korvai2 = ks.korvai_specific(talam,edam)
-df2=my_korvai1.final_korvai()
+df2=my_korvai2.final_korvai()
 st.table(df2)
 st.balloons()
 
