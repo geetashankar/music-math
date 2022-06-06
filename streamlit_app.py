@@ -14,10 +14,16 @@ edam = st.sidebar.slider('What is the Edam?', -10, 20, 1)
 st.subheader("Some korvais in the AAA BCBCB format include: ")
 my_korvai1 = kb.korvai_basic(talam,edam)
 df1=my_korvai1.final_korvai()
-st.table(df1)
+try:
+    st.table(df1)
+except:
+    print('There are no possible korvais with this template in this talam and edam.')
 st.subheader("Some korvais with specific purvangam templates include: ")
 my_korvai2 = ks.korvai_specific(talam,edam)
 df2=my_korvai2.final_korvai()
-st.table(df2)
+try:
+    st.table(df2)
+except:
+    print('There are no possible korvais with this template in this talam and edam.')
 st.balloons()
 
