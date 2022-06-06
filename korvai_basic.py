@@ -86,10 +86,11 @@ class korvai_basic:
             if tentative%3!=0:
                 n=n+1
                 tentative=base*n+self.edam
-        try:
-            return self.a_combo(tentative/3)
-        except:
-            return -1
+        return self.a_combo(tentative/3)
+        #try:
+            #return self.a_combo(tentative/3)
+        #except:
+            #return -1
     
     #This function uses the korvai function to collect all possible korvai options
     #For each korvai option, it randomly a selects a purvangam konokol and utarangam konokol 
@@ -97,8 +98,8 @@ class korvai_basic:
     def final_korvai(self):
         korvai_options = self.korvai()
         korvai_list=[]
-        if korvai_options == -1:
-            return('impossible to make a korvai, maybe try singing an edam to edam korvai here')
+        #if korvai_options == -1:
+            #return('impossible to make a korvai, maybe try singing an edam to edam korvai here')
         for k in korvai_options:
             a,b,c=k
             A = r.choice(self.PURVANGAMS[a])
