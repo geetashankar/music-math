@@ -1,9 +1,6 @@
 import korvai_basic as kb
 import korvai_specific as ks
 import streamlit as st
-import numpy as np
-import random as r
-import pandas as pd
 
 
 st.title("Welcome to Geeta's Korvai Calculator!",)
@@ -15,7 +12,10 @@ st.subheader("Some korvais in the AAA BCBCB format include: ")
 my_korvai1 = kb.korvai_basic(talam,edam)
 df1=my_korvai1.final_korvai()
 try:
-    st.table(df1)
+    if len(df1)==0:
+        st.write('There are no possible korvais with this template in this talam and edam.')
+    else:
+        st.table(df1)
 except:
     st.write('There are no possible korvais with this template in this talam and edam.')
 st.subheader("Some korvais with specific purvangam templates include: ")
