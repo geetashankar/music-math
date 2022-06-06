@@ -17,13 +17,13 @@ df1=my_korvai1.final_korvai()
 try:
     st.table(df1)
 except:
-    print('There are no possible korvais with this template in this talam and edam.')
+    st.write('There are no possible korvais with this template in this talam and edam.')
 st.subheader("Some korvais with specific purvangam templates include: ")
 my_korvai2 = ks.korvai_specific(talam,edam)
 df2=my_korvai2.final_korvai()
 try:
     st.table(df2)
 except:
-    print('There are no possible korvais with this template in this talam and edam.')
+    st.write('There are no possible korvais with this template in this talam and edam.')
 st.balloons()
 
