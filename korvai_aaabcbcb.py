@@ -2,6 +2,7 @@
 import numpy as np 
 import random as r
 import pandas as pd
+import streamlit as st
 
 class korvai_basic:
     
@@ -121,10 +122,16 @@ class korvai_basic:
 #The main method takes in a talam and edam (watch out for spelling of the talam LOL) and returns 1+ possible korvais
 def main():
     
-    talam = str(input('talam: '))
-    edam = int(input('edam: '))
+    st.title("Welcome to Korvai Calculator!")
+    talam = st.sidebar.selectbox(
+        "Select the Talam:",
+        ["adi", "adi2", "rupakam", "misra chaapu", "khanda chaapu", "jumpa"])
+    edam = st.sidebar.slider('What is the Edam?', -6, 6, 1)
+    st.write('Your Talam is ', talam)
+    st.write('Your Edam is ', edam)
     my_korvai = korvai_basic(talam,edam)
-    my_korvai.final_korvai()
+    df = my_korvai.final_korvai()
+    st.write(df)
 
 if __name__ == "__main__":
     main()
