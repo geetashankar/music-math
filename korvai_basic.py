@@ -29,6 +29,8 @@ class korvai_basic:
         7: ['takadimi taang,, '],
         8: ['tatom, tadikitatom ','tadikitatom taang,, ','dit,takadinatom,'],
         9: ['takatom, tadikitatom '],
+        10: ['taka,dina,taam,; '],
+        16: ['taka,dina,taka,dina,taam,; ']
     }
     
     #The non-karvai part of the utarangams are B. They currently include patterns of numerican counts between 5-9
@@ -40,7 +42,9 @@ class korvai_basic:
         6: ['tadi,kitatom '],
         7: ['ta,di,kitatom ','tadi,kita,tom '],
         8: ['ta,di,,kitatom ','tatom, tadikitatom '],
-        9: ['ta,di,ki,ta,tom ', 'ta,tom,tadikitatom ']
+        9: ['ta,di,ki,ta,tom ', 'ta,tom,tadikitatom '],
+        12: ['takita takadimi tadikitatom '],
+        15: ['tadikitatom tadikitatom tadikitatom ']
     }
     
     def __init__(self,talam,edam):
