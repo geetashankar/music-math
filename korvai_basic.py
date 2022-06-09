@@ -21,7 +21,7 @@ class korvai_basic:
     #The purvangam pattern is therefore A A A
     #Below is a dictionary for different A patterns based on the count between 5-9
     #To add more numeric options for A, change A_OPTIONS 
-    A_OPTIONS = np.arange(5,10)
+    A_OPTIONS = [5,6,7,8,9,10,16]
     #To add more varieties for a specific A, change PURVANGAMS values
     PURVANGAMS = {
         5: ['taka taang,, ', 'taki,ta, '],
@@ -35,7 +35,7 @@ class korvai_basic:
     
     #The non-karvai part of the utarangams are B. They currently include patterns of numerican counts between 5-9
     #To add more numeric options for B, change B_OPTIONS
-    B_OPTIONS = np.arange(5,10)
+    B_OPTIONS = [5,6,7,8,9,12,15]
     #To add more varieties for a specific B, change UTARANGAMS values
     UTARANGAMS = {
         5: ['tadikitatom '],
